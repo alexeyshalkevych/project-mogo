@@ -1,0 +1,55 @@
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-logo__link {
+  @extend %link; 
+  font-family: $font-title, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: $color-subcontent;
+}
+
+.site-navigation__svg {
+  width: 18px;
+  height: 18px;
+  fill: $color-subcontent;
+  transition: fill 200ms linear;
+}
+
+.site-navigation {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 490px;
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    @extend %link; 
+    padding-bottom: 10px;
+    font-family: $font-title, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-subcontent;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 200ms linear;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color-decor-third;
+    border-bottom: 3px solid $color-decor-third;
+  }
+
+  &__link:hover &__svg,
+  &__link:focus &__svg {
+    fill: $color-decor-third;
+  }
+}

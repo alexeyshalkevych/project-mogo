@@ -23,7 +23,7 @@ function html() {
 }
 
 function styles() {
-  return src('src/sass/main.scss')
+  return src('src/sass/styles.scss')
     .pipe(plumber())
     .pipe(
       stylelint({

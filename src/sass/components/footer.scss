@@ -1,0 +1,59 @@
+.page-footer {
+  padding: 12px 0;
+}
+
+.footer-content {
+  @include flex-center('ver');
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid $color-decor-fourth;
+}
+
+.footer-addres {
+  @include flex-center('ver');
+
+  &__copyright {
+    font-size: 14px;
+    font-family: $font-title, sans-serif;
+    font-style: normal;
+    color: $color-all-content;
+    line-height: 1.2;
+
+    &::before {
+      content: '\00a9  ';
+    }
+  }
+
+  &__link {
+    @extend %link;
+    margin: 0;
+    padding-left: 2px;
+    color: $color-decor-first;
+    font-style: normal;
+  }
+}
+
+.footer-input {
+  display: flex;
+
+  &__email {
+    padding-left: 12px;
+    font-family: $font-all-content, sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: $color-all-content;
+    font-style: italic;
+    background-color: $color-subcontent;
+    border: 1px solid $color-decor-fourth;
+    width: 234px;
+    height: 40px;
+
+    &::placeholder {
+      font-family: $font-all-content, sans-serif;
+      font-size: 15px;
+      line-height: 26px;
+      color: $color-decor-fourth;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.banner {
+  // padding-bottom: 230px;
+  background-image: linear-gradient(
+      180deg,
+      $grad-color-first,
+      $grad-color-second
+    ),
+    url('../images/banner-image-min.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        180deg,
+        $grad-color-first,
+        $grad-color-second
+      ),
+      url('../images/banner-image@2x-min.png');
+  }
+}

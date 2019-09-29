@@ -1,0 +1,50 @@
+// FONTS
+
+
+// Montserrat-fonts
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/fonts/montserrat.woff2") format("woff2"),
+    url("../fonts/Montserrat/fonts/montserrat.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/fonts/montserrat-bold.woff2") format("woff2"),
+    url("../fonts/Montserrat/fonts/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Roboto-fonts
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("../fonts/Roboto/fonts/roboto-v20-latin-300.woff2") format("woff2"),
+    url("../fonts/Roboto/fonts/roboto-v20-latin-300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("../fonts/Roboto/fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    url("../fonts/Roboto/fonts/roboto-v20-latin-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// KaushanScript-fonts
+
+@font-face {
+  font-family: "KaushanScript";
+  src: local("KaushanScript"), local("KaushanScript-regular"),
+    url("../fonts/KaushanScript/fonts/Kaushan-Script-regular.woff2") format("woff2"),
+    url("../fonts/KaushanScript/fonts/kaushanscript-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: cursive;
+}

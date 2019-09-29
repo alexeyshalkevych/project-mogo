@@ -1,0 +1,45 @@
+.team-hover {
+  @extend %list;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__item {
+    display: flex;
+    margin-right: 1px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    @extend %link;
+    @include flex-center();
+    width: 56px;
+    height: 56px;
+    background-color: $color-decor-third;
+    border: none;
+    transition: background-color 200ms linear, fill 200ms linear;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $color-decor-secondary;
+  }
+
+  &__link-svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: $color-decor-first;
+    transition: fill 200ms linear;
+  }
+}
+
+.team-hover__link:hover .team-hover__link-svg,
+.team-hover__link:focus .team-hover__link-svg {
+  fill: $color-subcontent;
+}

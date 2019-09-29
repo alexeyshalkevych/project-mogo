@@ -1,0 +1,50 @@
+.btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: $font-title, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-subcontent;
+  text-align: center;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+.banner__btn {
+  width: 164px;
+  height: 44px;
+  border: 3px solid $color-subcontent;
+  transition: color 200ms linear, background-color 200ms linear,
+    box-shadow 200ms linear, text-shadow 200ms linear, border 200ms linear;
+
+  &:hover,
+  &:focus {
+    color: $color-subcontent;
+    text-shadow: 0 0 2px $color-subcontent;
+    background-color: $color-decor-first;
+    border: none;
+    box-shadow: 0 0 5px $color-decor-first, 0 0 10px $color-decor-first,
+      0 0 15px $color-decor-first;
+  }
+}
+
+.footer-input__button {
+  margin: 0;
+  width: 150px;
+  height: 40px;
+  background-color: $color-decor-secondary;
+  transition: color 200ms linear, background-color 200ms linear,
+    box-shadow 200ms linear, text-shadow 200ms linear;
+
+  &:hover,
+  &:focus {
+    color: $color-subcontent;
+    text-shadow: 0 0 2px $color-subcontent;
+    background-color: $color-decor-first;
+    box-shadow: 0 0 5px $color-decor-first, 0 0 10px $color-decor-first,
+      0 0 15px $color-decor-first;
+  }
+}

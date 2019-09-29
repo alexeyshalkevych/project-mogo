@@ -1,0 +1,32 @@
+// font-size and line-height properties
+@mixin size-height($fz, $lh) {
+  font-size: $fz;
+  line-height: $lh;
+}
+
+// centered properties
+
+@mixin flex-center($type: 'all') {
+  display: flex;
+
+  @if $type== 'all' {
+    justify-content: center;
+    align-items: center;
+  } @else if $type== 'hor' {
+    justify-content: center;
+  } @else if $type== 'ver' {
+    align-items: center;
+  }
+}
+
+// generate-pseudo-icon properties
+
+$icons: photography, web, creative, seo, css-html, digital;
+
+@mixin generate-pseudo-icon($baseClass, $list, $path, $text) {
+  @each $icon in $list {
+    .#{$baseClass}#{$icon}::before {
+      background-image: url(#{$path}#{$icon}.#{$text});
+    }
+  }
+}

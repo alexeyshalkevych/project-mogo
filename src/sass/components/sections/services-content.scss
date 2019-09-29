@@ -1,0 +1,52 @@
+.services-content {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+    flex-basis: 382px;
+    margin-bottom: 96px;
+    padding-left: 90px;
+    animation: service-animate 3s ease-in 0.1s reverse both;
+  }
+
+  &__item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes service-animate {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.services-content__icon::before {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  content: "";
+  width: 32px;
+  height: 31px;
+  background-repeat: no-repeat;
+}
+
+$icons: photography, web, creative, seo, css-html, digital;
+
+@include generate-pseudo-icon(
+  'sevices-content__icon--',
+  $icons,
+  '../images/service-icons/service-',
+  'svg'
+);
