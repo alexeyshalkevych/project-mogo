@@ -1,0 +1,21 @@
+.about-content {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+    transition: box-shadow 200ms linear;
+  }
+
+  &__item:hover {
+    box-shadow: 5px 5px 10px $color-shadow, -5px -5px 10px $color-shadow,
+      -5px 5px 10px $color-shadow, 5px -5px 10px $color-shadow;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+}

@@ -4,6 +4,7 @@
 
 .site-logo__link,
 .site-navigation__link,
+.about-hover__link,
 .team-hover__link,
 .footer-addres__link {
   display: block;
@@ -13,6 +14,7 @@
 }
 
 .site-navigation,
+.about-content,
 .services-content,
 .team-content,
 .team-hover {
@@ -684,6 +686,10 @@ img {
   color: white;
 }
 
+.about__title {
+  margin-bottom: 42px;
+}
+
 .services__title {
   margin-bottom: 65px;
 }
@@ -694,6 +700,100 @@ img {
 
 .team__title {
   margin-bottom: 42px;
+}
+
+.about {
+  padding: 94px 0;
+  text-align: center;
+  background-color: #e4e3ad;
+}
+
+.about__description {
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0 130px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-content__item {
+  position: relative;
+  transition: box-shadow 200ms linear;
+}
+
+.about-content__item:hover {
+  box-shadow: 5px 5px 10px rgba(153, 153, 153, 0.5), -5px -5px 10px rgba(153, 153, 153, 0.5), -5px 5px 10px rgba(153, 153, 153, 0.5), 5px -5px 10px rgba(153, 153, 153, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-hover:hover {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+  width: 380px;
+  height: 250px;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+
+.about-hover:hover--device {
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/device.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hover:hover--headphones {
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/headphones@2x.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hover:hover--flowerpot {
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/flowerpot.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hover__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #fce38a;
+  border: none;
+  transition: background-color 200ms linear, fill 200ms linear;
+}
+
+.about-hover__link:hover,
+.about-hover__link:focus {
+  background-color: #95e1d3;
+}
+
+.about-hover__link-svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+  fill: #f38181;
+  transition: fill 200ms linear;
+}
+
+.about-hover__link:hover .about-hover__link-svg,
+.about-hover__link:focus .about-hover__link-svg {
+  fill: white;
 }
 
 .services {
@@ -1033,6 +1133,18 @@ img {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .banner {
     background-image: linear-gradient(180deg, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../images/banner-image@2x-min.png");
+  }
+
+  .about-hover:hover--device {
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/device@2x.jpg");
+  }
+
+  .about-hover:hover--headphones {
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/headphones@2x.jpg");
+  }
+
+  .about-hover:hover--flowerpot {
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/flowerpot@2x.jpg");
   }
 
   .team-content__hover--matthew {

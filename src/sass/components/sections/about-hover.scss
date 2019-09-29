@@ -1,0 +1,105 @@
+.about-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+    width: 380px;
+    height: 250px;
+    opacity: 0;
+    transition: opacity 200ms linear;
+
+    &--device {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/device.jpg');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/device@2x.jpg');
+      }
+    }
+
+    &--headphones {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/headphones@2x.jpg');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/headphones@2x.jpg');
+      }
+    }
+
+    &--flowerpot {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/flowerpot.png');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/flowerpot@2x.jpg');
+      }
+    }
+  }
+
+  &__link {
+    @extend %link;
+    @include flex-center();
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: $color-decor-third;
+    border: none;
+    transition: background-color 200ms linear, fill 200ms linear;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $color-decor-secondary;
+  }
+
+  &__link-svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: $color-decor-first;
+    transition: fill 200ms linear;
+  }
+}
+
+.about-hover__link:hover .about-hover__link-svg,
+.about-hover__link:focus .about-hover__link-svg {
+  fill: $color-subcontent;
+}
