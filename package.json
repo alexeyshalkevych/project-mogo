@@ -1,0 +1,19 @@
+{
+  "name": "project-mogo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexeyshalkevych/project-mogo.git"
+  },
+  "author": "Alexey Shalkevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexeyshalkevych/project-mogo/issues"
+  },
+  "homepage": "https://github.com/alexeyshalkevych/project-mogo#readme"
+}
