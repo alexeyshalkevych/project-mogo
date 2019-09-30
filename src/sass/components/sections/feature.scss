@@ -1,0 +1,51 @@
+.feature {
+  padding: 102px 0 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba($color-subcontent, $alpha: 0.8),
+      rgba($color-subcontent, $alpha: 0.8)
+    ),
+    url("../images/feature/feature_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      0deg,
+      rgba($color-subcontent, $alpha: 0.8),
+      rgba($color-subcontent, $alpha: 0.8)
+    ),
+      url('../images/feature/feature_bg@2x.jpg');
+  }
+
+  &__title {
+    margin-bottom: 44px;
+  }
+
+  &__image {
+    transform: translateX(50%);
+  }
+}
+
+.box-image {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 274px;
+    height: 476px;
+    bottom: -92px;
+    left: 6px;
+    transform: translateX(250%);
+    background-image: url("../images/feature/iphone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/feature/iphone@2x.png');
+    }
+  }
+}

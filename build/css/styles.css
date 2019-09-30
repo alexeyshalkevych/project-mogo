@@ -854,7 +854,7 @@ img {
 }
 
 .services {
-  padding-top: 96px;
+  padding: 110px 120px;
 }
 
 .services-content {
@@ -932,6 +932,40 @@ img {
 
 .sevices-content__icon--digital::before {
   background-image: url(../images/service-icons/service-digital.svg);
+}
+
+.feature {
+  padding: 102px 0 0;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/feature/feature_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feature__title {
+  margin-bottom: 44px;
+}
+
+.feature__image {
+  transform: translateX(50%);
+}
+
+.box-image {
+  position: relative;
+}
+
+.box-image::after {
+  position: absolute;
+  content: "";
+  width: 274px;
+  height: 476px;
+  bottom: -92px;
+  left: 6px;
+  transform: translateX(250%);
+  background-image: url("../images/feature/iphone.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .team {
@@ -1202,6 +1236,14 @@ img {
 
   .about-content__hover--flowerpot {
     background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/about-image/flowerpot@2x.jpg");
+  }
+
+  .feature {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/feature/feature_bg@2x.jpg");
+  }
+
+  .box-image::after {
+    background-image: url("../images/feature/iphone@2x.png");
   }
 
   .team-content__hover--matthew {
