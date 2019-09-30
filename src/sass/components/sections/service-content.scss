@@ -1,0 +1,142 @@
+.box-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service__image {
+  margin-right: 30px;
+}
+
+.service-content {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__item {
+    padding: 0;
+    border: 1px solid $color-decor-fourth;
+
+    &--active {
+      .service-content__title {
+        &::after {
+          background-image: url("../images/service-image/service-icon/arrow-up.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .service-content__description {
+        display: block;
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+
+      .service-sontent__scroll {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding: 20px 0 20px 60px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    &--picture {
+      &::before {
+        background-image: url("../images/service-image/service-icon/picture-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &--equalizer {
+      &::before {
+        background-image: url("../images/service-image/service-icon/equalizer-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &--bull {
+      &::before {
+        background-image: url("../images/service-image/service-icon/bull-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      width: 22px;
+      height: 12px;
+      background-image: url("../images/service-image/service-icon/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__description {
+    display: none;
+    margin: 0;
+    padding: 0 55px 0 15px;
+    color: $color-all-content-secondary;
+    @include size-height(15px, 24px);
+    font-weight: 300;
+    font-style: italic;
+    border-top: 1px solid rgb(229, 229, 229);
+  }
+
+  &__box-description {
+    position: relative;
+  }
+}
+
+.service-sontent__scroll {
+  display: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 5px;
+    height: 130px;
+    background-color: $color-scroll;
+    z-index: 3;
+  }
+}
+
+.service-content__scroll-line {
+  &::after {
+    position: absolute;
+    top: 29px;
+    right: 30px;
+    content: "";
+    width: 5px;
+    height: 90px;
+    background-color: $color-decor-secondary;
+    z-index: 10;
+  }
+}

@@ -17,6 +17,7 @@
 .facts-content,
 .about-content,
 .services-content,
+.service-content,
 .team-content,
 .team-hover {
   margin: 0;
@@ -687,7 +688,8 @@ img {
   color: white;
 }
 
-.about__title {
+.about__title,
+.service__title {
   margin-bottom: 42px;
 }
 
@@ -966,6 +968,148 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.service {
+  padding: 110px 0 120px;
+}
+
+.service__description {
+  margin: 0;
+  margin-bottom: 100px;
+  padding: 0 130px;
+  text-align: center;
+}
+
+.box-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service__image {
+  margin-right: 30px;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.service-content__item {
+  padding: 0;
+  border: 1px solid #e7e7e7;
+}
+
+.service-content__item--active .service-content__title::after {
+  background-image: url("../images/service-image/service-icon/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-content__item--active .service-content__description {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.service-content__item--active .service-sontent__scroll {
+  display: block;
+}
+
+.service-content__title {
+  position: relative;
+  margin: 0;
+  padding: 20px 0 20px 60px;
+}
+
+.service-content__title::before {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.service-content__title--picture::before {
+  background-image: url("../images/service-image/service-icon/picture-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-content__title--equalizer::before {
+  background-image: url("../images/service-image/service-icon/equalizer-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-content__title--bull::before {
+  background-image: url("../images/service-image/service-icon/bull-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-content__title::after {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  width: 22px;
+  height: 12px;
+  background-image: url("../images/service-image/service-icon/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-content__description {
+  display: none;
+  margin: 0;
+  padding: 0 55px 0 15px;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+  font-style: italic;
+  border-top: 1px solid #e5e5e5;
+}
+
+.service-content__box-description {
+  position: relative;
+}
+
+.service-sontent__scroll {
+  display: none;
+}
+
+.service-sontent__scroll::after {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  width: 5px;
+  height: 130px;
+  background-color: whitesmoke;
+  z-index: 3;
+}
+
+.service-content__scroll-line::after {
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  content: "";
+  width: 5px;
+  height: 90px;
+  background-color: #95e1d3;
+  z-index: 10;
 }
 
 .team {
