@@ -1,6 +1,7 @@
 .slider-quote {
   position: relative;
   padding: 70px 20px;
+  z-index: 3;
 }
 
 .quote-info {
@@ -71,7 +72,8 @@
   height: 22px;
   border: none;
   background-color: transparent;
-  cursor: pointer !important;
+  cursor: pointer;
+  z-index: 5;
 
   &--pre {
     left: 22px;

@@ -6,7 +6,8 @@
 .site-navigation__link,
 .footer-addres__link,
 .about-hover__link,
-.team-hover__link {
+.team-hover__link,
+.content-logo__link {
   display: block;
   font-family: "Montserrat", sans-serif;
   line-height: 1.2;
@@ -19,7 +20,8 @@
 .services-content,
 .service-content,
 .team-content,
-.team-hover {
+.team-hover,
+.content-logo {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -746,6 +748,7 @@ img {
 .slider-quote {
   position: relative;
   padding: 70px 20px;
+  z-index: 3;
 }
 
 .quote-info {
@@ -818,7 +821,8 @@ img {
   height: 22px;
   border: none;
   background-color: transparent;
-  cursor: pointer !important;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .arrow--pre {
@@ -1455,6 +1459,17 @@ img {
 .team-hover__link:hover .team-hover__link-svg,
 .team-hover__link:focus .team-hover__link-svg {
   fill: white;
+}
+
+.logo {
+  padding: 70px 10px 64px;
+  background-color: #f6f6f6;
+}
+
+.content-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
