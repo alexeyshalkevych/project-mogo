@@ -15,7 +15,96 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
 
+  &__hover {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+    width: 380px;
+    height: 250px;
+    opacity: 0;
+    transition: opacity 200ms linear;
+
+    &--device {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/device.jpg');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/device@2x.jpg');
+      }
+    }
+
+    &--headphones {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/headphones@2x.jpg');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/headphones@2x.jpg');
+      }
+    }
+
+    &--flowerpot {
+      background-image: linear-gradient(
+          0deg,
+          $grad-color-first 0%,
+          $grad-color-second 100%
+        ),
+        url('../images/about-image/flowerpot.jpg');
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+            0deg,
+            $grad-color-first 0%,
+            $grad-color-second 100%
+          ),
+          url('../images/about-image/flowerpot@2x.jpg');
+      }
+    }
+  }
   
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 380px;
+    height: 250px;
+    background-color: $color-decor-secondary;
+    opacity: 0;
+    transition: opacity 200ms linear;
+  }
+  
+}
+
+.about-content__item:hover .about-content__hover {
+  opacity: 1;
+}
+
+.about-content__item:hover .about-content__background {
+  opacity: 1;
 }
