@@ -1,0 +1,85 @@
+.slider-quote {
+  position: relative;
+  padding: 70px 20px;
+}
+
+.quote-info {
+  position: relative;
+  padding-left: 282px;
+  padding-right: 64px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 110px;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 150px;
+    height: 150px;
+    border: 3px solid $color-decor-secondary;
+  }
+
+  &::after {
+    position: absolute;
+    top: 45px;
+    left: 156px;
+    content: "";
+    width: 63px;
+    height: 61px;
+    background-image: url("../images/quote-icon/speech.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    @include size-height(24px, 36px);
+    color: $color-all-content-secondary;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__pretitle {
+    margin: 0;
+    padding: 0;
+    font-family: $font-pretitle;
+    color: $color-all-content;
+    @include size-height(24px, 1.2);
+    font-weight: 400;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      margin-right: 15px;
+      width: 60px;
+      height: 3px;
+      background-color: $color-decor-first;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 12px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer !important;
+
+  &--pre {
+    left: 22px;
+    background-image: url("../images/quote-icon/arrow-left.svg");
+  }
+
+  &--next {
+    right: 22px;
+    background-image: url("../images/quote-icon/arrow-right.svg");
+  }
+}
