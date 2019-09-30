@@ -1,0 +1,36 @@
+.facts {
+  background-color: $color-decor-secondary;
+}
+
+.facts-content {
+  @extend %list;
+  @include flex-center("ver");
+  justify-content: space-between;
+
+  &__item {
+    padding: 82px 54px 88px;
+    border-right: 1px solid rgba($color: $color-subcontent, $alpha: 0.3);
+    font-family: $font-title, sans-serif;
+    color: $color-subcontent;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:first-child {
+      border-left: 1px solid rgba($color: $color-subcontent, $alpha: 0.3);
+    }
+  }
+
+  &__number {
+    margin: 0;
+    padding: 0;
+    @include size-height(72px, 1.2);
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
