@@ -4,7 +4,12 @@
   z-index: 3;
 }
 
+.quote-photo-slider {
+  padding: 100px 0;
+}
+
 .quote-info {
+  display: none;
   position: relative;
   padding-left: 282px;
   padding-right: 64px;
@@ -12,7 +17,7 @@
   &::before {
     position: absolute;
     top: 0;
-    left: 110px;
+    left: 90px;
     bottom: 0;
     margin: auto;
     content: "";
@@ -24,7 +29,7 @@
   &::after {
     position: absolute;
     top: 45px;
-    left: 156px;
+    left: 136px;
     content: "";
     width: 63px;
     height: 61px;
@@ -61,6 +66,38 @@
       background-color: $color-decor-first;
     }
   }
+}
+
+.quote-picture {
+  display: none;
+  position: relative;
+  padding-left: 310px;
+  padding-right: 75px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 74px;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    width: 210px;
+    height: 210px;
+    background-image: url("../images/quote-icon/joshua.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../images/quote-icon/joshua@2x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.quote-info--active,
+.quote-picture--active {
+  display: block;
 }
 
 .arrow {
