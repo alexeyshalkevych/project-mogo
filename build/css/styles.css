@@ -466,7 +466,7 @@ img {
 }
 
 .banner {
-  background-image: linear-gradient(180deg, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../images/banner-image-min.png");
+  background-image: linear-gradient(180deg, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../images/banner-image.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -707,6 +707,10 @@ img {
 
 .team__title {
   margin-bottom: 42px;
+}
+
+.people__title {
+  margin-bottom: 85px;
 }
 
 .facts {
@@ -1395,19 +1399,19 @@ img {
 }
 
 .team-content__hover--matthew {
-  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-matthew-min.png");
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-matthew.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .team-content__hover--christopher {
-  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-christopher-min.png");
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-christopher.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .team-content__hover--michel {
-  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-michel-min.png");
+  background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-michel.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1585,7 +1589,13 @@ img {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .banner {
-    background-image: linear-gradient(180deg, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../images/banner-image@2x-min.png");
+    background-image: linear-gradient(180deg, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url("../images/banner-image@2x.jpg");
+  }
+
+  .quote-picture::before {
+    background-image: url("../images/quote-icon/joshua@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .about-content__hover--device {
@@ -1609,14 +1619,14 @@ img {
   }
 
   .team-content__hover--matthew {
-    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-matthew@2x-min.png");
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-matthew@2x.jpg");
   }
 
   .team-content__hover--christopher {
-    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-christopher@2x-min.png");
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-christopher@2x.jpg");
   }
 
   .team-content__hover--michel {
-    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-michel@2x-min.png");
+    background-image: linear-gradient(0deg, rgba(243, 129, 129, 0.9) 0%, rgba(252, 227, 138, 0.9) 100%), url("../images/team-photo/team-michel@2x.jpg");
   }
 }
