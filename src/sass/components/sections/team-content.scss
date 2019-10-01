@@ -25,6 +25,12 @@
     margin-bottom: 10px;
   }
 
+  &__profession {
+    color: $color-all-content-secondary;
+    @include size-height(15px, 24px);
+    text-transform: capitalize;
+  }
+
   &__hover {
     position: absolute;
     top: -10px;
@@ -41,7 +47,7 @@
           $grad-color-first 0%,
           $grad-color-second 100%
         ),
-        url('../images/team-photo/team-matthew.jpg');
+        url("../images/team-photo/team-matthew.jpg");
       background-size: cover;
       background-position: center;
 
@@ -51,7 +57,7 @@
             $grad-color-first 0%,
             $grad-color-second 100%
           ),
-          url('../images/team-photo/team-matthew@2x.jpg');
+          url("../images/team-photo/team-matthew@2x.jpg");
       }
     }
 
@@ -61,7 +67,7 @@
           $grad-color-first 0%,
           $grad-color-second 100%
         ),
-        url('../images/team-photo/team-christopher.jpg');
+        url("../images/team-photo/team-christopher.jpg");
       background-size: cover;
       background-position: center;
 
@@ -71,7 +77,7 @@
             $grad-color-first 0%,
             $grad-color-second 100%
           ),
-          url('../images/team-photo/team-christopher@2x.jpg');
+          url("../images/team-photo/team-christopher@2x.jpg");
       }
     }
 
@@ -81,7 +87,7 @@
           $grad-color-first 0%,
           $grad-color-second 100%
         ),
-        url('../images/team-photo/team-michel.jpg');
+        url("../images/team-photo/team-michel.jpg");
       background-size: cover;
       background-position: center;
 
@@ -91,7 +97,7 @@
             $grad-color-first 0%,
             $grad-color-second 100%
           ),
-          url('../images/team-photo/team-michel@2x.jpg');
+          url("../images/team-photo/team-michel@2x.jpg");
       }
     }
   }

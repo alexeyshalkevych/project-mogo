@@ -76,11 +76,12 @@
 .item-proffesion {
   margin: 0;
   padding: 0;
+  color: $color-all-content-secondary;
   font-family: $font-all-content, sans-serif;
   font-style: italic;
-  text-transform: capitalize;
 }
 
 .people__title {
   margin-bottom: 85px;
 }
+
