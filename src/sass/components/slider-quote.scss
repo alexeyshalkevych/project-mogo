@@ -115,6 +115,9 @@
   &--pre {
     left: 22px;
     background-image: url("../images/quote-icon/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &--next {
