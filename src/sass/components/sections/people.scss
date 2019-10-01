@@ -1,0 +1,21 @@
+.people {
+  padding: 110px 0 130px;
+  background-image: linear-gradient(
+      0deg,
+      rgba($color-subcontent, $alpha: 0.8),
+      rgba($color-subcontent, $alpha: 0.8)
+    ),
+    url("../images/people-image/people_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        0deg,
+        rgba($color-subcontent, $alpha: 0.8),
+        rgba($color-subcontent, $alpha: 0.8)
+      ),
+      url("../images/people-image/people_bg@2x.jpg");
+  }
+}

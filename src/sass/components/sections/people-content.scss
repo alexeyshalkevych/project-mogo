@@ -1,0 +1,96 @@
+.people-content {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__item {
+    position: relative;
+    padding-left: 190px;
+    flex: 0 0 50%;
+    margin-bottom: 62px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      left: 50px;
+      top: 0;
+      content: "";
+      width: 110px;
+      height: 110px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--matthew {
+      &::before {
+        background-image: url("../images/people-image/matthew.png");
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../images/people-image/matthew@2x.png");
+        }
+      }
+    }
+
+    &--nick {
+      &::before {
+        background-image: url("../images/people-image/nick.png");
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../images/people-image/nick@2x.png");
+        }
+      }
+    }
+
+    &--jaeylinn {
+      &::before {
+        background-image: url("../images/people-image/jaeylinn.png");
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../images/people-image/jaeylinn@2x.png");
+        }
+      }
+    }
+
+    &--mike {
+      &::before {
+        background-image: url("../images/people-image/mike.png");
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../images/people-image/mike@2x.png");
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    color: $color-all-content;
+    @include size-height(15px, 24px);
+
+    &::after {
+      display: block;
+      content: "";
+      margin-top: 17px;
+      width: 60px;
+      height: 3px;
+      background-color: $color-decor-first;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    color: $color-all-content-secondary;
+    @include size-height(15px, 24px);
+    font-weight: 400;
+  }
+}
