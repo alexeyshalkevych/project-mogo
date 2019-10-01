@@ -1,0 +1,68 @@
+.work-gallery {
+  display: flex;
+
+  &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @extend %link;
+    @include flex-center();
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: $color-subcontent;
+    transition: background-color 200ms linear, fill 200ms linear;
+    
+  }
+
+  &__link-svg {
+    margin-bottom: 18px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__link-title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: $font-title, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__link-descr {
+    margin: 0;
+    padding: 0;
+    font-family: $font-all-content, sans-serif;
+    @include size-height(15px, 24px);
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.gallery-box__content {
+  position: relative;
+
+  &:hover {
+    .gallery-box__hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.gallery-box__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 200ms linear;
+  background-image: linear-gradient(
+    0deg,
+    $grad-color-first 0%,
+    $grad-color-second 100%
+  );
+  opacity: 0;
+}
