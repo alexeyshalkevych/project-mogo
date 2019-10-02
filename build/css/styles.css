@@ -4,6 +4,9 @@
 
 .site-logo__link,
 .site-navigation__link,
+.footer-info__follower,
+.footer-social__link,
+.footer-logo__link,
 .footer-addres__link,
 .about-hover__link,
 .team-hover__link,
@@ -17,6 +20,7 @@
 
 .site-navigation,
 .facts-content,
+.footer-social,
 .about-content,
 .services-content,
 .service-content,
@@ -886,7 +890,8 @@ img {
 }
 
 .page-footer {
-  padding: 12px 0;
+  padding: 70px 0 17px;
+  background-color: whitesmoke;
 }
 
 .footer-content {
@@ -897,21 +902,101 @@ img {
   border-top: 1px solid #e7e7e7;
 }
 
+.footer-info {
+  flex: 0 0 480px;
+}
+
+.footer-info__description {
+  margin: 0;
+  margin-bottom: 46px;
+  padding: 0;
+  padding-right: 10px;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.footer-info__follower {
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-info__follower::after {
+  display: block;
+  content: "";
+  margin-top: 16px;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+
+.footer-info__number {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-info__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-info__text {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  color: #999999;
+  font-style: italic;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social__link {
+  padding: 20px 7px 20px;
+}
+
+.footer-social__link:hover .footer-social__link-svg,
+.footer-social__link:focus .footer-social__link-svg {
+  fill: #f38181;
+}
+
+.footer-social__link-svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #95e1d3;
+  transition: fill 200ms linear;
+}
+
+.footer-logo__link {
+  margin-bottom: 35px;
+  color: #cccccc;
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+}
+
 .footer-addres {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .footer-addres__copyright {
-  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   color: #333333;
+  font-size: 14px;
   line-height: 1.2;
 }
 
 .footer-addres__copyright::before {
-  content: '\00a9  ';
+  content: "\00a9  ";
 }
 
 .footer-addres__link {
