@@ -1135,21 +1135,10 @@
       </section>
       <!----------MAP----------->
       <article class="map">
-          <div class="container">
-              <h2 class="map__title section-title section__title--shape">
-                open map
-              </h2>
-            </div>
-        <!-- <div class="box-map">
-          <iframe
-            src="https://www.google.ru/maps/d/embed?mid=1L_I9uCnLkXqW5c7KeVTBZpE1DTtyxMUF"
-            width="100%"
-            height="200"
-          ></iframe>
-          <div class="content">
-            
-          </div>
-        </div> -->
+          <h2 class="map__title section-title map__title--shape">
+              open map
+          </h2>
+        <div id="map"></div>
       </article>
     </main>
     <!--------------FOOTER--------------->
@@ -1189,8 +1178,32 @@
         par[1].classList.remove("service-content__item--active");
         par[2].classList.add("service-content__item--active");
       };
-
-      //map function
     </script>
+
+    <!-- map function -->
+
+    <script>
+      
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 50.3820587, lng: 30.3858474 },
+          zoom: 8
+        });
+
+        var image =
+          "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+        var beachMarker = new google.maps.Marker({
+          position: { lat: 50.3820587, lng: 30.574 },
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6MKQPdBqm9RPgD__XbOt6hI1I7lFcEgw&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>

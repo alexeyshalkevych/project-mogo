@@ -1797,15 +1797,54 @@ img {
 }
 
 .map {
-  padding-top: 36px;
-  padding-bottom: 50px;
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 55px;
   width: 100%;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/map/map_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .map__title {
+  margin: 0;
   font-size: 24px;
   color: #f38181;
+}
+
+.map__title::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 26px;
+  margin: 0 auto 5px;
+  background-image: url("../images/map/marker.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map__title--shape::after {
+  display: block;
+  content: "";
+  margin: 20px auto 0;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+}
+
+.map:hover #map {
+  display: block;
+}
+
+#map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -1869,5 +1908,9 @@ img {
 
   .people-content__item--mike::before {
     background-image: url("../images/people-image/mike@2x.png");
+  }
+
+  .map {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/map/map_bg@2x.jpg");
   }
 }

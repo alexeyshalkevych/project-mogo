@@ -1,36 +1,67 @@
 .map {
-  padding-top: 36px;
-  padding-bottom: 50px;
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 55px;
   width: 100%;
   background-image: linear-gradient(
-    0deg,
-    rgba($color-subcontent, $alpha: 0.8),
-    rgba($color-subcontent, $alpha: 0.8)
-  );
+      0deg,
+      rgba($color-subcontent, $alpha: 0.8),
+      rgba($color-subcontent, $alpha: 0.8)
+    ),
+    url("../images/map/map_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        0deg,
+        rgba($color-subcontent, $alpha: 0.8),
+        rgba($color-subcontent, $alpha: 0.8)
+      ),
+      url("../images/map/map_bg@2x.jpg");
+  }
 
   &__title {
+    margin: 0;
     font-size: 24px;
     color: $color-decor-first;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 20px;
+      height: 26px;
+      margin: 0 auto 5px;
+      background-image: url("../images/map/marker.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__title--shape {
+    &::after {
+      display: block;
+      content: "";
+      margin: 20px auto 0;
+      width: 60px;
+      height: 3px;
+      background-color: $color-decor-first;
+    }
+  }
+
+  &:hover #map{
+    display: block;
   }
 }
 
-// .box-map {
-//   position: relative;
-//   z-index: 5;
-// }
-
-// .content {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   padding-top: 36px;
-//   width: 100%;
-//   height: 100%;
-//   // background-color: rgb(150, 69, 69);
-//   background-image: linear-gradient(
-//     0deg,
-//     rgba($color-subcontent, $alpha: 0.8),
-//     rgba($color-subcontent, $alpha: 0.8)
-//   );
-//   z-index: 9999999;
-// }
+#map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+}
