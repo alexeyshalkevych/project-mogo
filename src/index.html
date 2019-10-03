@@ -21,19 +21,19 @@
             </div>
             <ul class="site-navigation">
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">about</a>
+                <a href="#about" class="site-navigation__link">about</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">service</a>
+                <a href="#service" class="site-navigation__link">service</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">work</a>
+                <a href="#work" class="site-navigation__link">work</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">blog</a>
+                <a href="#blog" class="site-navigation__link">blog</a>
               </li>
               <li class="site-navigation__item">
-                <a href="#" class="site-navigation__link">contact</a>
+                <a href="#contact" class="site-navigation__link">contact</a>
               </li>
               <li class="site-navigation__item">
                 <a href="#" class="site-navigation__link">
@@ -108,7 +108,7 @@
 
     <main class="content">
       <!----------SECTION ABOUT----------->
-      <section class="section about">
+      <section id="about" class="section about">
         <div class="container">
           <p class="about__pretitle section-pretitle">
             What we do
@@ -222,7 +222,7 @@
         </div>
       </article>
       <!----------SECTION SERVICES----------->
-      <section class="section services">
+      <section id="service" class="section services">
         <div class="container">
           <p class="services__pretitle section-pretitle">
             We work with
@@ -768,7 +768,7 @@
         </div>
       </article>
       <!----------SECTION WORK----------->
-      <section class="section work">
+      <section id="work" class="section work">
         <div class="container">
           <p class="work__pretitle section-pretitle">Who we are</p>
           <h2 class="work__title section-title section__title--shape">
@@ -1049,7 +1049,7 @@
         </div>
       </section>
       <!----------SECTION BLOG----------->
-      <section class="section blog">
+      <section id="blog" class="section blog">
         <div class="container">
           <p class="blog__pretitle section-pretitle">Our stories</p>
           <h2 class="blog__title section-title section__title--shape">
@@ -1159,7 +1159,7 @@
     </main>
 
     <!--------------FOOTER--------------->
-    <footer class="page-footer">
+    <footer id="contact" class="page-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
@@ -1457,6 +1457,37 @@
     </footer>
 
     <!--------------SCRIPTS--------------->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              2000,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+
     <script>
       // slider
 
@@ -1489,7 +1520,9 @@
       };
 
       // photo-slider
-      let photoSlides = document.querySelectorAll("#slides-photo .quote-picture");
+      let photoSlides = document.querySelectorAll(
+        "#slides-photo .quote-picture"
+      );
       let photoCurrentSlide = 0;
 
       function photoNextSlide() {
@@ -1503,7 +1536,8 @@
       function goToPhotoSlide(n) {
         photoSlides[photoCurrentSlide].className = "quote-picture";
         photoCurrentSlide = (n + photoSlides.length) % photoSlides.length;
-        photoSlides[photoCurrentSlide].className = "quote-picture quote-picture--active";
+        photoSlides[photoCurrentSlide].className =
+          "quote-picture quote-picture--active";
       }
 
       let nextPhoto = document.getElementById("nextPhoto");
@@ -1517,7 +1551,6 @@
         photoPreviousSlide();
       };
 
-      
       // counter facts
 
       function scroll(number, elem, timeout, step) {
