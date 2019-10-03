@@ -15,6 +15,7 @@
   cursor: pointer;
 
   &__item {
+    width: 600px;
     padding: 0;
     border: 1px solid $color-decor-fourth;
 
@@ -36,7 +37,19 @@
       .service-sontent__scroll {
         display: block;
       }
+
+      .service-content__scroll-line {
+        display: block;
+      }
+
+      .service-content__box-description {
+        display: block;
+      }
     }
+  }
+
+  &__box-description {
+    display: none;
   }
 
   &__title {
@@ -129,6 +142,8 @@
 }
 
 .service-content__scroll-line {
+  display: none;
+  
   &::after {
     position: absolute;
     top: 29px;

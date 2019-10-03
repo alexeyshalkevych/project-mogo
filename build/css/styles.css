@@ -750,7 +750,7 @@ img {
 }
 
 .facts-content__item {
-  padding: 82px 54px 88px;
+  padding: 82px 52px 88px;
   border-right: 1px solid rgba(255, 255, 255, 0.3);
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -818,6 +818,18 @@ img {
   background-size: cover;
 }
 
+.quote-info:first-of-type .quote-info__description {
+  color: green;
+}
+
+.quote-info:nth-of-type(2) .quote-info__description {
+  color: yellow;
+}
+
+.quote-info:last-of-type .quote-info__description {
+  color: red;
+}
+
 .quote-info__description {
   margin: 0;
   margin-bottom: 20px;
@@ -854,6 +866,18 @@ img {
   position: relative;
   padding-left: 310px;
   padding-right: 75px;
+}
+
+.quote-picture:first-of-type .quote-info__pretitle {
+  color: green;
+}
+
+.quote-picture:nth-of-type(2) .quote-info__pretitle {
+  color: yellow;
+}
+
+.quote-picture:last-of-type .quote-info__pretitle {
+  color: red;
 }
 
 .quote-picture::before {
@@ -1407,6 +1431,7 @@ img {
 }
 
 .service-content__item {
+  width: 600px;
   padding: 0;
   border: 1px solid #e7e7e7;
 }
@@ -1425,6 +1450,18 @@ img {
 
 .service-content__item--active .service-sontent__scroll {
   display: block;
+}
+
+.service-content__item--active .service-content__scroll-line {
+  display: block;
+}
+
+.service-content__item--active .service-content__box-description {
+  display: block;
+}
+
+.service-content__box-description {
+  display: none;
 }
 
 .service-content__title {
@@ -1508,6 +1545,10 @@ img {
   height: 130px;
   background-color: whitesmoke;
   z-index: 3;
+}
+
+.service-content__scroll-line {
+  display: none;
 }
 
 .service-content__scroll-line::after {

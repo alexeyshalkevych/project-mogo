@@ -38,6 +38,18 @@
     background-size: cover;
   }
 
+  &:first-of-type &__description {
+    color: green;
+  }
+
+  &:nth-of-type(2) &__description {
+    color: yellow;
+  }
+
+  &:last-of-type &__description {
+    color: red;
+  }
+
   &__description {
     margin: 0;
     margin-bottom: 20px;
@@ -73,6 +85,18 @@
   position: relative;
   padding-left: 310px;
   padding-right: 75px;
+
+  &:first-of-type .quote-info__pretitle {
+    color: green;
+  }
+
+  &:nth-of-type(2) .quote-info__pretitle{
+    color: yellow;
+  }
+
+  &:last-of-type .quote-info__pretitle {
+    color: red;
+  }
 
   &::before {
     position: absolute;

@@ -199,23 +199,23 @@
         <div class="container">
           <ul class="facts-content">
             <li class="facts-content__item">
-              <h3 class="facts-content__number">42</h3>
+              <h3 id="counter-first" class="facts-content__number">42</h3>
               <p class="facts-content__text">Web Design Projects</p>
             </li>
             <li class="facts-content__item">
-              <h3 class="facts-content__number">123</h3>
+              <h3 id="counter-second" class="facts-content__number">123</h3>
               <p class="facts-content__text">happy client</p>
             </li>
             <li class="facts-content__item">
-              <h3 class="facts-content__number">15</h3>
+              <h3 id="counter-third" class="facts-content__number">15</h3>
               <p class="facts-content__text">award winner</p>
             </li>
             <li class="facts-content__item">
-              <h3 class="facts-content__number">99</h3>
+              <h3 id="counter-fourth" class="facts-content__number">99</h3>
               <p class="facts-content__text">cup of coffee</p>
             </li>
             <li class="facts-content__item">
-              <h3 class="facts-content__number">24</h3>
+              <h3 id="counter-fives" class="facts-content__number">24</h3>
               <p class="facts-content__text">members</p>
             </li>
           </ul>
@@ -416,16 +416,32 @@
       <!------------QUOTE-------------->
       <article class="quote">
         <div class="container">
-          <div class="slider-quote">
-            <button class="arrow arrow--pre"></button>
-            <button class="arrow arrow--next"></button>
+          <div id="slides" class="slider-quote">
+            <button id="pre" class="arrow arrow--pre"></button>
+            <button id="next" class="arrow arrow--next"></button>
             <div class="quote-info quote-info--active">
               <p class="quote-info__description">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation.”
               </p>
-              <h2 class="quote-info__pretitle">Jon Doe</h2>
+              <h2 class="quote-info__pretitle">Jon Doe 11111</h2>
+            </div>
+            <div class="quote-info">
+              <p class="quote-info__description">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.”
+              </p>
+              <h2 class="quote-info__pretitle">Jon Doe 22222</h2>
+            </div>
+            <div class="quote-info">
+              <p class="quote-info__description">
+                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.”
+              </p>
+              <h2 class="quote-info__pretitle">Jon Doe 33333</h2>
             </div>
           </div>
         </div>
@@ -947,16 +963,16 @@
       <!------------QUOTE-------------->
       <article class="quote-photo quote">
         <div class="container">
-          <div class="quote-photo-slider slider-quote">
-            <button class="arrow arrow--pre"></button>
-            <button class="arrow arrow--next"></button>
+          <div id="slides-photo" class="quote-photo-slider slider-quote">
+            <button id="prePhoto" class="arrow arrow--pre"></button>
+            <button id="nextPhoto" class="arrow arrow--next"></button>
             <div class="quote-picture quote-picture--active">
               <p class="quote-info__description">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation.”
               </p>
-              <h2 class="quote-info__pretitle">Joshua Earle</h2>
+              <h2 class="quote-info__pretitle">Joshua Earle 11111</h2>
             </div>
             <div class="quote-picture">
               <p class="quote-info__description">
@@ -1406,7 +1422,7 @@
               <li class="instagram-gallery__item">
                 <img
                   srcset="
-                    images/footer-image/inst-image-spruce.jpg         88w,
+                    images/footer-image/inst-image-spruce.jpg     88w,
                     images/footer-image/inst-image-spruce@2x.jpg 176w
                   "
                   sizes="88px"
@@ -1419,7 +1435,7 @@
               <li class="instagram-gallery__item">
                 <img
                   srcset="
-                    images/footer-image/inst-image-sea.jpg         88w,
+                    images/footer-image/inst-image-sea.jpg     88w,
                     images/footer-image/inst-image-sea@2x.jpg 176w
                   "
                   sizes="88px"
@@ -1441,6 +1457,89 @@
     </footer>
 
     <!--------------SCRIPTS--------------->
+    <script>
+      // slider
+
+      let slides = document.querySelectorAll("#slides .quote-info");
+      let currentSlide = 0;
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function previousSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      function goToSlide(n) {
+        slides[currentSlide].className = "quote-info";
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].className = "quote-info quote-info--active";
+      }
+
+      let next = document.getElementById("next");
+      let previous = document.getElementById("pre");
+
+      next.onclick = function() {
+        nextSlide();
+      };
+
+      previous.onclick = function() {
+        previousSlide();
+      };
+
+      // photo-slider
+      let photoSlides = document.querySelectorAll("#slides-photo .quote-picture");
+      let photoCurrentSlide = 0;
+
+      function photoNextSlide() {
+        goToPhotoSlide(photoCurrentSlide + 1);
+      }
+
+      function photoPreviousSlide() {
+        goToPhotoSlide(photoCurrentSlide - 1);
+      }
+
+      function goToPhotoSlide(n) {
+        photoSlides[photoCurrentSlide].className = "quote-picture";
+        photoCurrentSlide = (n + photoSlides.length) % photoSlides.length;
+        photoSlides[photoCurrentSlide].className = "quote-picture quote-picture--active";
+      }
+
+      let nextPhoto = document.getElementById("nextPhoto");
+      let previousPhoto = document.getElementById("prePhoto");
+
+      nextPhoto.onclick = function() {
+        photoNextSlide();
+      };
+
+      previousPhoto.onclick = function() {
+        photoPreviousSlide();
+      };
+
+      
+      // counter facts
+
+      function scroll(number, elem, timeout, step) {
+        let i = 0;
+        (function() {
+          if (i <= number) {
+            setTimeout(arguments.callee, timeout);
+            document.getElementById(elem).innerHTML = i;
+            i = i + step;
+          } else {
+            document.getElementById(elem).innerHTML = number;
+          }
+        })();
+      }
+
+      scroll(42, "counter-first", 1, 1);
+      scroll(123, "counter-second", 1, 1);
+      scroll(15, "counter-third", 1, 1);
+      scroll(99, "counter-fourth", 1, 1);
+      scroll(24, "counter-fives", 1, 1);
+    </script>
+
     <script>
       let item = document.getElementsByClassName("service-content__item");
       let par = document.getElementsByClassName("service-content__item");
