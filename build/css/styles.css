@@ -470,7 +470,7 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -700,6 +700,15 @@ img {
   color: white;
 }
 
+.banner__title::after {
+  display: block;
+  content: "";
+  margin: 70px auto 0;
+  width: 60px;
+  height: 3px;
+  background-color: white;
+}
+
 .about__title,
 .service__title,
 .work__title {
@@ -884,6 +893,7 @@ img {
   background-image: url("../images/quote-icon/arrow-left.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 
 .arrow--next {
@@ -891,6 +901,7 @@ img {
   background-image: url("../images/quote-icon/arrow-right.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 
 .page-footer {
@@ -1822,8 +1833,6 @@ img {
 .people-content__subtitle {
   margin-bottom: 20px;
   color: #333333;
-  font-size: 15px;
-  line-height: 24px;
 }
 
 .people-content__subtitle::after {
@@ -1838,10 +1847,7 @@ img {
 .people-content__description {
   margin: 0;
   padding: 0;
-  color: #333333;
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 400;
+  color: #999999;
 }
 
 .blog {
