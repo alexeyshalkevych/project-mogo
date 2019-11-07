@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Module-11</title>
+    <title>Mogo</title>
     <link rel="stylesheet" href="css/styles.min.css" />
   </head>
 
@@ -1574,8 +1574,8 @@
     </script>
 
     <script>
-      let item = document.getElementsByClassName("service-content__item");
-      let par = document.getElementsByClassName("service-content__item");
+      let items = document.getElementsByClassName("service-content__item");
+      let params = document.getElementsByClassName("service-content__item");
 
       item[0].onclick = function() {
         par[0].classList.add("service-content__item--active");
@@ -1597,16 +1597,16 @@
     <!-- map function -->
 
     <script>
-      var map;
+      let map;
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 50.3820587, lng: 30.3858474 },
           zoom: 8
         });
 
-        var image =
+        let image =
           "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-        var beachMarker = new google.maps.Marker({
+        let beachMarker = new google.maps.Marker({
           position: { lat: 50.3820587, lng: 30.574 },
           map: map,
           icon: image
